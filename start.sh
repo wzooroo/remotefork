@@ -3,7 +3,8 @@
 /opt/acestream86/acestream.start >/dev/null 2>&1 &
 
 cd /app/
-dotnet RemoteForkCP.dll $1 >/dev/null 2>&1 &
+chmod +x RemoteForkCP
+./RemoteForkCP $1 >/dev/null 2>&1 &
 
 while true; do
         sleep $2
