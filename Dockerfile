@@ -25,7 +25,7 @@ RUN apt-get update -y && \
    find /opt/acestream86/androidfs/system -type d -exec chmod 755 {} \; && \
    find /opt/acestream86/androidfs/system -type f -exec chmod 644 {} \; && \
    chmod 755 /opt/acestream86/androidfs/system/bin/* /opt/acestream86/androidfs/acestream.engine/python/bin/python && \
-   rm -rf /tmp/* /opt/acestream/*
+   rm -rf /tmp/* /opt/acestream/* /RunApp.sh
 
 # add services
 ADD acestream.start /opt/acestream86/acestream.start
