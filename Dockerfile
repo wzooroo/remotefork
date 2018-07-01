@@ -28,13 +28,13 @@ RUN apt-get update -y && \
    rm -rf /tmp/* /opt/acestream/*
 
 # add services
-ADD acestream.start /opt/acestream/acestream.start
-ADD acestream.stop /opt/acestream/acestream.stop
-ADD acestream.conf /opt/acestream/androidfs/acestream.engine/acestream.conf
+ADD acestream.start /opt/acestream86/acestream.start
+ADD acestream.stop /opt/acestream86/acestream.stop
+ADD acestream.conf /opt/acestream86/androidfs/acestream.engine/acestream.conf
 ADD start.sh /usr/bin/start.sh
 RUN chmod +x /usr/bin/start.sh
-RUN chmod +x /opt/acestream/acestream.start
-RUN chmod +x /opt/acestream/acestream.stop
+RUN chmod +x /opt/acestream86/acestream.start
+RUN chmod +x /opt/acestream86/acestream.stop
 
 EXPOSE 8621 62062 6878 8027
 
