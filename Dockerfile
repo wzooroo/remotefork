@@ -18,19 +18,16 @@ RUN apt-get update -y && \
     wget && \
     
 # install acestream-engine
-   mkdir -p /opt/acestream86/ && \
-   wget -o - https://sybdata.de/files/public-docs/acestream_3.1.31_webUI_x86.tar.gz && \
-   tar -zxvf acestream_3.1.31_webUI_x86.tar.gz && \
-   mv androidfs /opt/acestream86/androidfs && \
-   find /opt/acestream86/androidfs/system -type d -exec chmod 755 {} \; && \
-   find /opt/acestream86/androidfs/system -type f -exec chmod 644 {} \; && \
-   chmod 755 /opt/acestream86/androidfs/system/bin/* /opt/acestream86/androidfs/acestream.engine/python/bin/python && \
+   wget -o - https://sybdata.de/files/public-docs/acestream_3.1.33_x86_webUI.tar.gz && \
+   tar -zxvf acestream_3.1.33_x86_webUI.tar.gz && \
+   mv acestream.engine/ /opt/ && \
+   find /opt/acestream.engine/androidfs/system -type d -exec chmod 755 {} \; && \
+   find /opt/acestream.engine/androidfs/system -type f -exec chmod 644 {} \; && \
+   chmod 755 /opt/acestream.engine/androidfs/system/bin/* /opt/acestream.engine/androidfs/acestream.engine/python/bin/python && \
    rm -rf /tmp/* /opt/acestream/* /RunApp.sh
-
+   
 # add services
-ADD acestream.start /opt/acestream86/acestream.start
-ADD acestream.stop /opt/acestream86/acestream.stop
-ADD acestream.conf /opt/acestream86/androidfs/acestream.engine/acestream.conf
+ADD acestream.conf /opt/acestream.engine/androidfs/acestream.engine/acestream.conf
 ADD start.sh /usr/bin/start.sh
 RUN chmod +x /usr/bin/start.sh
 RUN chmod +x /opt/acestream86/acestream.start
