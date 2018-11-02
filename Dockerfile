@@ -22,7 +22,7 @@ RUN apt-get update -y && \
    unzip linux-x64.zip && \
    mv linux-x64 app && \
    rm -rf /app/wwwroot && \
-   mv /app/linux-x64/* /app && \
+   mv app/* /app && \
    wget -o - https://github.com/ShutovPS/RemoteFork.Plugins/releases/download/hdrezka.0.0.8/RemoteFork.Plugins.HDRezka.dll && \
    wget -o - https://github.com/ShutovPS/RemoteFork.Plugins/releases/download/kinosha.0.0.2/RemoteFork.Plugins.Kinosha.dll && \
    wget -o - https://github.com/ShutovPS/RemoteFork.Plugins/releases/download/moonwalk.0.0.5/RemoteFork.Plugins.Moonwalk.dll && \
