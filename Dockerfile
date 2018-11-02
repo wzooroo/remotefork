@@ -33,6 +33,6 @@ RUN chmod +x /usr/bin/start.sh
 RUN chmod +x /opt/acestream86/acestream.start
 RUN chmod +x /opt/acestream86/acestream.stop
 
-EXPOSE 8621 62062 6878 8027
+EXPOSE 8621 62062 6878 8027 9955
 
 WORKDIR /
