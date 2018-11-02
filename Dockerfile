@@ -18,6 +18,15 @@ RUN apt-get update -y && \
     wget && \
     
 # install acestream-engine
+   wget -o - https://github.com/ShutovPS/RemoteFork/releases/download/v1.40.0.11/linux-x64.zip && \
+   unzip linux-x64.zip && \
+   mv linux-x64 app && \
+   rm -rf /app/wwwroot && \
+   mv /app/linux-x64/* /app && \
+   wget -o - https://github.com/ShutovPS/RemoteFork.Plugins/releases/download/hdrezka.0.0.8/RemoteFork.Plugins.HDRezka.dll && \
+   wget -o - https://github.com/ShutovPS/RemoteFork.Plugins/releases/download/kinosha.0.0.2/RemoteFork.Plugins.Kinosha.dll && \
+   wget -o - https://github.com/ShutovPS/RemoteFork.Plugins/releases/download/moonwalk.0.0.5/RemoteFork.Plugins.Moonwalk.dll && \
+   mv *.dll /app/Plugins && \
    wget -o - https://sybdata.de/files/public-docs/acestream_3.1.33_x86_webUI.tar.gz && \
    tar -zxvf acestream_3.1.33_x86_webUI.tar.gz && \
    mv acestream.engine/ /opt/ && \
