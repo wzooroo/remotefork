@@ -2,7 +2,7 @@
 
 /opt/acestream.engine/start_acestream_chroot.sh >/dev/null 2>&1 &
 
-cd /app/linux-x64/
+cd /app/
 chmod +x RemoteForkCP
 ./RemoteForkCP $1 >/dev/null 2>&1 &
 
