@@ -23,23 +23,21 @@ RUN apt-get update -y && \
    mv linux-x64 app && \
    rm -rf /app/wwwroot && \
    mv app/* /app && \
+   wget -o - https://github.com/ShutovPS/RemoteFork.Plugins/releases/download/filmix.0.0.3/RemoteFork.Plugins.Filmix.dll && \
    wget -o - https://github.com/ShutovPS/RemoteFork.Plugins/releases/download/hdrezka.0.0.10/RemoteFork.Plugins.HDRezka.dll && \
    wget -o - https://github.com/ShutovPS/RemoteFork.Plugins/releases/download/kinosha.0.0.2/RemoteFork.Plugins.Kinosha.dll && \
    wget -o - https://github.com/ShutovPS/RemoteFork.Plugins/releases/download/moonwalk.0.0.7/RemoteFork.Plugins.Moonwalk.dll && \
    mv *.dll /app/Plugins && \
-   wget -o - https://sybdata.de/data/acestream/acestream_3.1.33_x86_webUI.tar.gz && \
-   tar -zxvf acestream_3.1.33_x86_webUI.tar.gz && \
+   wget -o - https://sybdata.de/data/acestream/acestream_3.1.33.1_x86_wbUI.tar.gz && \
+   tar -zxvf acestream_3.1.33.1_x86_wbUI.tar.gz && \
    mv acestream.engine/ /opt/ && \
-   find /opt/acestream.engine/androidfs/system -type d -exec chmod 755 {} \; && \
-   find /opt/acestream.engine/androidfs/system -type f -exec chmod 644 {} \; && \
-   chmod 755 /opt/acestream.engine/androidfs/system/bin/* /opt/acestream.engine/androidfs/acestream.engine/python/bin/python && \
-   rm -rf /tmp/* /opt/acestream/* /RunApp.sh
+   rm -rf /tmp/* /RunApp.sh
    
 # add services
 ADD acestream.conf /opt/acestream.engine/androidfs/acestream.engine/acestream.conf
 ADD start.sh /usr/bin/start.sh
 RUN chmod +x /usr/bin/start.sh
 
-EXPOSE 8621 62062 6878 8027 9955
+EXPOSE 8621 6878 8027
 
 WORKDIR /
