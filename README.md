@@ -28,3 +28,4 @@ http://server_ip:8027/plugin?=pluginacestreamtv%5C.xml&pluginPath=as_channels%3B
    * Спорт
    * Фильмы
    * Эротика
+![2501ia](https://user-images.githubusercontent.com/24189833/51752839-af61bc00-20b8-11e9-81e6-442cc2af3be9.gif)
