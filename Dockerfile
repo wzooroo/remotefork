@@ -8,12 +8,11 @@ WORKDIR /tmp
 ENV DEBIAN_FRONTEND=noninteractive
 WORKDIR /tmp
 
-RUN apt-get update -y && \
+RUN apt-get update -y && apt-get upgrade -V -y && apt-get dist-upgrade -y && apt-get autoremove -y && \
     apt-get install -y apt-utils && \
     apt-get install -y \
     nano \
     tzdata \
-    htop \
     mc \
     wget && \
     
