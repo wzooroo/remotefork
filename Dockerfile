@@ -13,7 +13,6 @@ RUN apt-get update -y && apt-get upgrade -V -y && apt-get dist-upgrade -y && apt
     apt-get install -y \
     nano \
     tzdata \
-    mc \
     wget && \
     
 # install acestream-engine
