@@ -20,6 +20,8 @@ RemoteFork: http://your_server_ip:8027/
 Ace Stream: http://your_server_ip:6878/webui/app/hhGHqCMt/server
 
 ## Каналы Торрент-ТВ в формате M3U
+http://server_ip:8027/ttv.html 
+или
 http://server_ip:8027/plugin?=pluginacestreamtv%5C.xml&pluginPath=as_channels%3Bttv.json%3Bкатегория Замените текст "категория" в конце url на один из вариантов.
 
    * Детские
