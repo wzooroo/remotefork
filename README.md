@@ -3,6 +3,8 @@
 
 ubuntu based docker image for ![logo-text-test](https://user-images.githubusercontent.com/24189833/36645710-3deca456-1a6d-11e8-8bf0-84f078703d8d.png) (v3.1.35)
 
+![img_0645](https://user-images.githubusercontent.com/24189833/52170358-eedb7880-2748-11e9-817b-63ec339b98fb.jpg)
+
 ## Установка
 ```
 docker run -d --net=host -v /home/dlna/:/fs/dlna/ --name=acefork sybdata/remotefork bash -c "/usr/bin/start.sh your_server_ip hhGHqCMt 1800"
