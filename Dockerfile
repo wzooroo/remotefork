@@ -13,6 +13,7 @@ RUN apt-get update -y && apt-get upgrade -V -y && apt-get dist-upgrade -y && apt
     apt-get install -y --no-install-recommends \
     python-libxslt1 \
     net-tools \
+    unzip \
     nano \
     tzdata \
     wget && \
