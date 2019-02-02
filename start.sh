@@ -1,6 +1,6 @@
 #!/bin/bash
 
-/opt/acestream.engine/start_acestream_chroot.sh >/dev/null 2>&1 &
+/opt/start-engine --client-console @/opt/acestream.conf --bind-all --cache-dir /tmp/state/.ACEStream --state-dir /tmp/state/.ACEStream --access-token 666666 --service-remote-access --stats-report-peers >/dev/null 2>&1 &
 
 cd /app/
 chmod +x RemoteForkCP
@@ -8,5 +8,5 @@ chmod +x RemoteForkCP
 
 while true; do
         sleep $2
-        rm -rf /opt/acestream.engine/androidfs/acestream.engine/.ACEStream/collected_torrent_files/*
+        rm -rf /tmp/state/.ACEStream/collected_torrent_files/*
 done
