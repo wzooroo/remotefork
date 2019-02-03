@@ -6,7 +6,7 @@ mkdir -p /fs/acestream
 mkdir -p /fs/remotefork
 
 # ACE Stream
- /opt/acestream/start-engine --client-console @/opt/acestream/acestream.conf --bind-all --access-token $2 --cache-dir /tmp/state/.ACEStream --state-dir /tmp/state/.ACEStream --vod-drop-max-age 120 --live-cache-type memory --vod-cache-type memory --live-buffer 30 --vod-buffer 60 --service-remote-access --stats-report-peers >/dev/null 2>&1 &
+ /opt/acestream/start-engine --client-console @/opt/acestream/acestream.conf --bind-all --access-token $2 --cache-dir /tmp/state/.ACEStream --state-dir /tmp/state/.ACEStream --vod-drop-max-age 120 --live-cache-type memory --vod-cache-type memory --live-buffer 25 --vod-buffer 10 --service-remote-access --stats-report-peers >/dev/null 2>&1 &
 
 # Settings.json
 if [ -s /fs/remotefork/Settings.json ]
