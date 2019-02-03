@@ -25,6 +25,8 @@ Ace Stream: http://your_server_ip:6878/webui/app/hhGHqCMt/server
 ```
 http://server_ip:8027/ttv.html 
 ```
+![fork789](https://user-images.githubusercontent.com/24189833/52175940-f2541b80-27ab-11e9-8d6d-36388605bfee.png)
+
 или
 ```
 http://server_ip:8027/plugin?=pluginacestreamtv%5C.xml&pluginPath=as_channels%3Bttv.json%3Bкатегория 
